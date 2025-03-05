@@ -2,7 +2,7 @@ FROM node:20-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
-RUN npm i -g pnpm
+RUN npm i -g pnpm@latest
 
 FROM base AS build
 COPY . /usr/src/app
